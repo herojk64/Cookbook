@@ -1,0 +1,1394 @@
+:root{
+    --green:#009444;
+    --white:#ffff;
+    --lightwhite:rgb(218, 218, 218);
+    --black:rgb(0, 0, 0);
+    --lightblack:rgb(187, 187, 187);
+    --red:rgb(255, 0, 0);
+    --weight400:300;
+    --weight500:500;
+    --weight700:700;
+    --weight900:900;
+    --font16:16px;
+}
+
+
+*{
+    text-decoration: none;
+    list-style: none;
+    font-weight:var(--weight400);
+    font-size: 16pt;
+}
+h1{
+    font-size: 32pt;
+    font-weight: var(--weight900);
+}
+h2{
+    font-size:26pt ;
+    font-weight: var(--weight700);
+}
+h3{
+    font-size: 22pt;
+}
+
+h4{
+    font-size: 18pt;
+}
+
+p{
+    font-size: 16pt;
+    font-weight: var(--weight400);
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+a:hover , button:hover{
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+body,
+div,
+label,
+main,
+footer,
+nav,
+header{
+    padding:0;
+    margin:0;
+}
+
+
+/* pre sets */
+
+.flex{
+    display:flex;
+}
+.flex_wrap{
+    flex-wrap: wrap;
+}
+.flex_direction_column{
+    flex-direction: column;
+}
+
+.grid{
+    display:grid;
+}
+
+.align_center{
+    align-items:center;
+}
+
+.justify_content_center{
+    justify-content: center;
+}
+
+.justify_space_between{
+    justify-content: space-between;
+}
+
+
+
+/* end of presets */
+
+/* header  */
+.header_spacing{
+    
+    padding:0rem 4rem;
+}
+
+header nav{
+    border-bottom: 1px solid var(--green);
+}
+header nav .cookbook_logo{
+    width:5rem;
+    height:2rem;
+}
+header nav ol li{
+    display: inline;
+    align-items: center;
+    padding:0rem 2rem;
+}
+
+header nav ol li >a {
+    color:var(--green);
+}
+
+header nav ol li:nth-child(4){
+    display: flex;
+    gap:1rem;
+    border-left:2px solid var(--green);
+}
+header nav ol li .profile_pic img{
+    border-radius: 100%;
+    height:24px;
+    width:24px;
+}
+
+/* start of home page  */
+
+/* search section  */
+.search_section{
+    
+    background-image: url(../images/search_background1.png),
+    url(../images/search_background2.png);
+    background-repeat: no-repeat;
+    background-size: cover,10rem 23rem;
+    background-position: top left,75% 0%;
+    width: 100%;    
+}
+
+.search_section div{
+    margin:11rem 10rem !important;
+    width:50%;
+    gap:0.5rem;
+}
+
+.search_section span{
+    position: relative;
+    width:80%;
+}
+
+.search_section span p{
+    display: flex;
+    gap:1rem;
+    padding:1rem 1rem 1rem 2rem; 
+    border-radius: 0.7rem 0 0 .7rem;
+    background-color: var(--green);
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: large !important;
+}
+.search_section span p img{
+    width:1rem;
+    height:auto;
+    transform: rotate(270deg)!important;
+    
+}
+
+.search_section span input[name='search']{
+height:auto;
+padding:1rem;
+border: 0;
+border-radius: 0 0.7rem 0.7rem 0;
+outline: 0;
+width:100%;
+box-shadow: 0.2rem 0.1rem 10px 0 var(--black);
+}
+
+.search_section span .search_display{
+    position:absolute;
+    display: none;
+    max-height:10rem;
+    width:72.5%;
+    background-color:transparent;
+    margin:0 !important;
+    padding:0;
+    bottom: 0;
+    transform: translate(34.5%,101%);
+    gap:0.4rem;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-left: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+}
+
+
+.search_section span button{
+    position:absolute;
+    right:0;
+    top:0;
+    transform: translate(-30%,50%);
+    border-radius: 100%;
+    background-color: transparent;
+    outline: 0;
+    border:0;
+}
+.search_section span button:active > img{
+    margin-top: 0.1rem;
+    height:1.3rem;
+    width: 1.3rem;
+}
+
+.search_section span .search_display span{
+
+    width: 100%;
+    height: 5rem;
+    display: flex;
+}
+
+.search_section span .search_display span button{
+   position: static  !important;
+    border-radius: 0;
+    width: 100%;
+    transform: translate(0,0) !important;
+}
+
+
+/* end of search section  */
+
+/* end of header */
+
+/* main start  */
+
+.home_main{
+    background-image: url(../images/feature_background.svg);
+}
+
+
+/* first element  */
+
+.category{
+    border-radius: 0.4rem;
+    background-color: var(--white);
+   padding:1rem 3rem 4rem 3rem;
+   margin:4rem 6rem 6rem 6rem;
+   
+}
+
+.category h1{
+
+    color: var(--green);
+    
+}
+
+.category p{
+    padding:0.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: var(--weight500);
+    color: var(--lightwhite);
+}
+
+.category div{
+    gap:2rem;
+    margin-top: 2rem;
+}
+.category div span{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1.4rem;
+}
+.category div span img{
+   border-radius: 100%;
+   height:7rem;
+   width:7rem;
+}
+
+.category div span h4{
+  text-transform: uppercase;
+  font-weight: var(--weight500);
+ }
+/* end of first element  */
+
+/* second element  feature*/
+
+.feature{
+    width:100%;
+    background-color: var(--white);
+    padding:2rem 0;
+
+}
+
+.feature h1{
+    font-size: 3rem;
+    color:var(--green);
+}
+
+
+
+.feature_img_box{
+    width: 80%;
+    height:30rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature_img{
+    width: 100%;
+}
+
+.feature_inline_text:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+.feature_inline_text{
+    position:absolute;
+    height:100%;
+    width:100%;  
+    transition: 0.5s;
+}
+
+
+.feature_inline_text span{
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin-top:13%;
+    margin-left:10%;
+    gap:0.5rem;
+}
+
+
+
+.feature_inline_text span h2{
+    color:var(--green);
+    font-weight: var(--weight500);
+}
+
+.feature_inline_text span h1{
+    font-size:3rem;
+    color:var(--white) !important;
+}
+
+.feature_inline_text span p{
+    width:80%;
+    color:var(--white);
+}
+
+.feature_inline_text span button{
+    height:2.5rem;
+    width:8rem;
+    border-radius: 5rem;
+    margin-top:1rem;
+    color:var(--green);
+    transition: 0.5s;
+    border: 0;
+}
+
+.feature_inline_text span button:hover{
+ color:var(--white);
+ background-color: var(--green);
+}
+
+
+
+.feature .feature_extra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    gap:0.5rem;
+}
+.feature .feature_extra h2{
+    font-size: 26pt;
+    color:var(--green);
+    font-weight:var(--weight700);
+}
+
+.feature .feature_extra p{
+    font-size:16px;
+    max-width: 80%;
+    color:var(--lightblack);
+}
+
+.feature .feature_extra a{
+   color:var(--green);
+   font-weight: var(--weight500);
+}
+
+
+/* end of second element  */
+
+/* third element recipe section  */
+
+.recipe_section h1{
+    color: var(--green);
+    margin-top:3rem;
+}
+
+.recipe_section .recipe_box{
+    display:grid;
+    width:70%;
+    margin: 0rem 0 4rem 0;
+    grid-template-columns:18% 18% 18% 18% 18%;
+    align-items: center;
+    justify-content: center;
+    gap:2%;
+    cursor: pointer;
+    
+}
+
+.recipe_section .recipe_box > div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+}
+.recipe_holder{
+    margin-top:2rem;
+}
+.recipe_holder img{
+    width: 70rem;
+    border-radius:0.3rem;
+}
+.recipe_holder h4{
+    text-align: center;
+    color: var(--green);
+}
+
+.recipe_section a{
+    color: var(--green);
+    margin-bottom: 2rem;
+}
+
+
+/* end of third element  */
+
+/* end of main  */
+
+/* end of home page  */
+
+/* discover page  */
+
+
+.dis_cover{
+    width: 100%;
+    position:relative;
+}
+.dis_cover img{
+    width: 100%;
+    height: 90vh;
+}
+.dis_cover .overlay{
+    position: absolute;
+    top:40%;
+    left:10%;
+    
+}
+
+.dis_cover .overlay h3{
+    color: var(--green);
+}
+
+.dis_cover .overlay h1{
+    color:var(--white);
+}
+
+.dis_cover .overlay p{
+    color:var(--lightwhite);
+    width:40%;
+}
+
+.dis_cover button{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    outline: 0;
+    border: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    color: white;
+    left:50%;
+    bottom: 0;
+    transform: translate(0,-50%);
+}
+
+/* end of cover page  */
+
+/* start of menu items  */
+
+.dis_menu_container {
+    margin-top: 2rem;
+    width: 100%;
+}
+.dis_menu_container span{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dis_menu_container span > h1{
+   
+    color:var(--green);
+}
+.dis_menu_container span > .dis_items {
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    
+    min-height: 10rem;
+}
+
+
+.dis_items{
+    display: grid;
+    grid-template-columns: repeat(10,20%) ;
+   
+    gap:0.8rem;
+}
+
+.dis_items .recipe_holder_discover{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end of menu items  */
+
+/* end of discover page  */
+
+
+/* login page  */
+
+.login_main{
+    width: 100%;
+    justify-content: flex-end;
+    background-image: url(../images/login_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.login_main form{
+margin: 5rem 10rem 8.6rem 0rem !important;
+gap:0.5rem;
+}
+
+.login_main form h4{
+    text-transform: uppercase;
+}
+.login_main form h1{
+    color: var(--green);
+}
+
+.login_main form p{
+    color: var(--lightwhite);
+    font-weight: var(--weight400);
+}
+.login_main form p > a{
+    font-weight: var(--weight500);
+    color: var(--green);
+}
+
+.error_msg{
+    visibility:hidden;
+    background-color: rgba(250, 39, 39, 0.616);
+    border-radius: 5px;
+    color: var(--red);
+    
+}
+
+.incont{
+    gap:0.5rem;
+    margin-bottom: 1rem !important;
+}
+
+.input_icon{
+    position:relative;
+}
+.input_icon input{
+    padding-left: 10px;
+    outline: 0;
+    width: 100%;
+    height:2rem;
+    border:0;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 var(--black);
+
+}
+
+.input_icon input:focus{
+    box-shadow: 0 0 4px 0 var(--green);
+
+}
+
+.input_icon img{
+    position:absolute;
+    right:0;
+    transform: translate(-30%,-150%);
+}
+
+.input_btns{
+    gap:0.5rem;
+}
+
+.input_btns button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 1rem;
+    width: 10rem;
+    height:2rem;
+    transition: 1s ease;
+}
+
+.input_btns button:hover{
+   background-color: var(--green);
+   color: var(--white);
+}
+
+/* end of login */
+
+
+/* register start  */
+
+.register_main{
+   
+    background-image: url(../images/register_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.register_main form{
+     gap:0.5rem;
+    height:89vh;
+    width: 100%;
+    justify-content: center;
+
+}
+.register_main form > *{
+    margin-left: 3rem;
+    width:50%;
+}
+.register_main form > span{
+    display: flex;
+    justify-content: space-between;
+}
+
+.register_main form h4{
+    text-transform: uppercase;
+}
+
+.register_main form h1{
+    color: var(--green);
+}
+
+.register_main form p{
+    color: var(--lightblack);
+}
+
+.register_main form p a{
+    color: var(--green);
+}
+
+.register_main form input{
+   width: 100%;
+    height: 2rem;
+    padding:0 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+   
+}
+.register_main form .reg_reset input{
+width: 43%;
+}
+.reg_reset select{
+    width: 40%;
+    height: 2rem;
+    padding:0 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+
+ } 
+ 
+ .register_main form span button{
+    margin-top: 0.3rem;
+    height:2rem;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 1rem;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 10px 0 var(--black);
+    color:var(--green);
+    transition: 1s ease;
+}
+
+
+
+.register_main form span button:hover{
+   background-color: var(--green);
+   color: var(--white);
+}
+
+
+/* end of register  */
+
+/* Start of profile */
+
+.profile_main{
+    margin:1rem;
+    color:var(--green);
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    min-height:50vh;
+    
+}
+.profile_main > *{
+width:40%;
+
+}
+.profile_name{
+    display:flex;
+    gap:2rem;
+}
+.profile_password{
+    margin:1rem;
+    gap:2rem;
+    justify-content: center;
+    align-items: center;
+    transition: 4s ease-in;
+    display:none;
+}
+.profile_password button,.profile_main button{
+    width:30%;
+    margin-top: 0.3rem;
+    height:2rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 10px 0 var(--black);
+    color:var(--green);
+    transition: 1s ease;
+}
+.profile_password button:hover ,.profile_main button:hover{
+    background-color: var(--green);
+   color: var(--white);
+}
+
+.feedback{
+    display: none;
+}
+
+.feedback textarea{
+    width: 100%;
+    padding:1rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+   
+}
+.feedback button{
+    width:30%;
+    margin-top: 0.3rem;
+    height:2rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 10px 0 var(--black);
+    color:var(--green);
+    transition: 1s ease;
+}
+
+.feedback button:hover{
+    background-color: var(--green);
+   color: var(--white);
+}
+.profile_main .logout_btn{
+    background-color: var(--red);
+    color:var(--white);
+}
+
+.profile_main .logout_btn:hover{
+    background-color: var(--white);
+    color: var(--red);
+}
+
+/* end of profile */
+
+/* footer section */
+
+footer{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    background-color:#F0F0F0;
+}
+footer span{
+    width:30%;
+    margin:1rem 2rem;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+
+}
+footer span p img{
+
+    width:1.2rem;
+
+}
+footer span p{
+
+    display:flex;
+    gap:0.4rem;
+    align-items: center;
+
+}
+
+.footer_logo{
+    width:35%;
+    
+}
+
+/* End of section */
+
+/* Admin  */
+
+/* admin dashboard */
+
+
+.admin_dashboard .admin_header_box{
+    margin:0.35rem 0;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--green);
+}
+
+.admin_dashboard .admin_header_box span{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.admin_dashboard  .btns{
+    
+        outline: 0;
+        border:1px solid var(--green);
+        background-color: transparent;
+        color: var(--green);
+        border-radius: 1rem;
+        width: 10rem;
+        height:2rem;
+        transition: 1s ease;
+}
+
+.admin_dashboard .btns:hover{
+    background-color: var(--green);
+    color: var(--white);
+ }
+
+ .admin_dashboard .log_btn{
+     
+     color: var(--red);
+ }
+ .admin_dashboard .log_btn:hover{
+    border:1px solid var(--red);
+     color: var(--white);
+     background: var(--red);
+ }
+
+
+/* end of admin Dashboard */
+ 
+
+/* addnew section  */
+
+ .admin_addnew div:nth-child(1){
+    margin:0.35rem 0;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--green);
+}
+
+.admin_addnew div:nth-child(1) span{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.admin_addnew  .btns{
+    
+        outline: 0;
+        border:1px solid var(--green);
+        background-color: transparent;
+        color: var(--green);
+        border-radius: 1rem;
+        width: 10rem;
+        height:2rem;
+        transition: 1s ease;
+}
+
+.admin_addnew .btns:hover{
+    background-color: var(--green);
+    color: var(--white);
+ }
+
+ .admin_addnew .log_btn{
+     
+     color: var(--red);
+ }
+ .admin_addnew .log_btn:hover{
+    border:1px solid var(--red);
+     color: var(--white);
+     background: var(--red);
+ }
+
+.admin_addnew .adminForm select{
+    background:transparent;
+    outline: none;
+    border: 1px solid var(--green);
+    border-radius: 7px;
+}
+.admin_addnew .adminForm select option:nth-child(1){
+    display: none;
+}
+
+.admin_addnew div:nth-child(2){
+    display: flex;
+
+
+}
+
+.admin_addnew .adminForm{
+    margin-right:1rem; 
+    padding:2rem 1rem;
+    border-right:1px solid var(--green);
+    
+}
+
+.admin_forms[data-value="2"]{
+    display: none;
+}
+
+
+.adminformContainer{
+    width:80%;
+    justify-content: center;
+}
+
+.admin_ing_add{
+    gap:1rem;
+    align-items: center;
+    width:40%;
+}
+
+.admin_ing_add h1{
+text-align: center;
+}
+
+.admin_ing_add input{
+    
+    padding:0.4rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+}
+
+.admin_ing_add button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 1rem;
+    width: 10rem;
+    height:2rem;
+    transition: 1s ease;
+}
+
+.admin_ing_add button:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.admin_form_add{
+    align-items: center;
+    gap:1rem;
+    margin-bottom: 1rem;
+    width:50%;
+}
+
+.admin_form_add > *{
+   width: 100%;
+    
+}
+
+.admin_form_add input,.admin_form_add select{
+    padding:0.4rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+}
+
+.admin_form_add h1{
+    text-align: center;
+}
+
+.admin_form_add span{
+    width:100%;
+}
+
+.admin_form_add span select{
+    width:100%;
+    padding:0.3rem 1rem;
+}
+
+
+.admin_form_add img{
+    display: none;
+    width: 100%;
+    
+}
+
+.admin_form_add textarea{
+    padding:0.4rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+}
+
+.admin_form_add button:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.admin_form_add button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 1rem;
+    width: 10rem;
+    height:2rem;
+    transition: 1s ease;
+}
+
+.admin_form_add .formInginput{
+    align-items: center;
+    margin: 0;
+    gap:1rem;
+    
+}
+
+.admin_form_add .formInginput .idisp{
+    display: none;
+    width:80%;
+    align-items: center;
+    flex-direction: column;
+    max-height:10rem;
+    overflow-y:scroll;
+    gap: 0.3rem;
+    
+    
+}
+
+.admin_form_add .formInginput .idisp > button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 0.3rem;
+    width: fit-content;
+    max-height: fit-content;
+    transition: 1s ease;
+}
+
+.admin_form_add .formInginput .iSelected{
+    display: flex;
+    gap:0.5rem;
+    flex-direction: column;
+}
+
+.admin_form_add .formInginput .iSelected span{
+    display:flex;
+    gap:0.4rem;
+}
+
+.admin_form_add .formInginput .iSelected span input{
+    width:3rem;
+    height:1rem;
+}
+.admin_form_add .formInginput .iSelected span button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 0.3rem;
+    width: fit-content;
+    max-height: fit-content;
+    transition: 1s ease;
+}
+
+
+.admin_content_box{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.admin_view_data{
+    gap:0.4rem;
+    width: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+    border:1px solid var(--green);
+    border-radius: 10px;
+}
+.admin_view_data img{
+    
+    width:10%;
+}
+
+.admin_view_data button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 1rem;
+    width: 10rem;
+    height:2rem;
+    transition: 1s ease;
+}
+
+.admin_view_data button:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.admin_view_data .data_delete_btn{
+    color: var(--red);
+}
+
+.admin_view_data .data_delete_btn:hover{
+    border:1px solid var(--red);
+     color: var(--white);
+     background: var(--red);
+ }
+
+/* edit content  */
+
+
+
+.admin_update_container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_form_update{
+    align-items: center;
+    gap:1rem;
+    margin-bottom: 1rem;
+    width:50%;
+}
+
+.admin_form_update > *{
+   width: 100%;
+    
+}
+
+.admin_form_update input,.admin_form_update select{
+    padding:0.4rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+}
+
+.admin_form_update h1{
+    text-align: center;
+}
+
+.admin_form_update span{
+    width:100%;
+}
+
+.admin_form_update span select{
+    width:100%;
+    padding:0.3rem 1rem;
+}
+
+
+.admin_form_update img{
+    display: none;
+    width: 100%;
+    
+}
+
+.admin_form_update textarea{
+    padding:0.4rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 5px 0 var(--black);
+    margin:0.1rem 0;
+}
+
+.admin_form_update button:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.admin_form_update button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 1rem;
+    width: 10rem;
+    height:2rem;
+    transition: 1s ease;
+}
+
+.admin_form_update .formInginput{
+    align-items: center;
+    margin: 0;
+    gap:1rem;
+    
+}
+
+.admin_form_update .formInginput .idisp{
+    display: none;
+    width:80%;
+    align-items: center;
+    flex-direction: column;
+    max-height:10rem;
+    overflow-y:scroll;
+    gap: 0.3rem;
+    
+    
+}
+
+.admin_form_update .formInginput .idisp > button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 0.3rem;
+    width: fit-content;
+    max-height: fit-content;
+    transition: 1s ease;
+}
+
+.admin_form_update .formInginput .iSelected{
+    display: flex;
+    gap:0.5rem;
+    flex-direction: column;
+}
+
+.admin_form_update .formInginput .iSelected span{
+    display:flex;
+    gap:0.4rem;
+}
+
+.admin_form_update .formInginput .iSelected span input{
+    width:3rem;
+    height:1rem;
+}
+.admin_form_update .formInginput .iSelected span button{
+    outline: 0;
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    border-radius: 0.3rem;
+    width: fit-content;
+    max-height: fit-content;
+    transition: 1s ease;
+}
+
+
+/* end of admin */
+
+
+/* searched values display  */
+
+
+.search_result{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    gap:1rem;
+}
+
+.searched_values{
+    width:70%;
+    gap:1rem;
+    cursor: pointer;
+    border:1px solid var(--green);
+    border-radius: 5px;
+    align-items: center;
+    padding:0.5rem;
+}
+
+.searched_values img{
+    max-height: 3rem;
+    max-width: 3rem;
+}
+
+/* end of searched value display  */
+
+/* recipe  */
+
+.recipe{
+    min-height: 85vh;
+    justify-content: center;
+    gap:0.4rem;
+    margin-bottom: 1rem;
+}
+
+.recipe_top_disp{
+    display:grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+}
+.recipe_top_disp span{
+    display:flex;
+    flex-direction: column;
+    gap:4rem;
+}
+
+.recipe_top_disp span h1,.recipe_top_disp span p b{
+    color:var(--green);
+}
+
+.recipe_details{
+    display: flex;
+    justify-content: center;
+}
+.recipe_details p{
+    width: 80%;
+}
+
+/* end of recipe */
