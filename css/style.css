@@ -468,6 +468,8 @@ box-shadow: 0.2rem 0.1rem 10px 0 var(--black);
 .dis_cover img{
     width: 100%;
     height: 90vh;
+    object-fit: cover;
+    object-position: 0 75%;
 }
 .dis_cover .overlay{
     position: absolute;
@@ -1381,6 +1383,11 @@ text-align: center;
 
 .recipe_top_disp span h1,.recipe_top_disp span p b{
     color:var(--green);
+}
+
+.recipe_Img_container > img{
+    object-fit: contain;
+    max-height:20rem;
 }
 
 .recipe_details{

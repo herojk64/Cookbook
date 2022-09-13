@@ -17,7 +17,7 @@ if(isset($_GET['header'])){
                 <p><b>Time: </b>".$data['rtime']."mins</p>
                 
                 </span>
-                <span>
+                <span class='recipe_Img_container'>
                     <img src='../images/".$data['file']."'alt='Recipe Image'>
                 </span>
                 
