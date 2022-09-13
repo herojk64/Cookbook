@@ -22,27 +22,35 @@
             $query1= "SELECT * FROM `recipe`";
             $run1 = mysqli_query($con,$query1);
             $run= mysqli_query($con,$query);
+
+            $recipe = array();
+
+            while($data1 = mysqli_fetch_assoc($run1)){
+                array_push($recipe,$data1);
+            }
             if($run){
+                if($run1){
                 while($data = mysqli_fetch_assoc($run)){
                     echo "<span>
                     <h1>".$data['cat_name']."</h1>
                     <div class=\"dis_items\">";
-                            if($run1){
-                                while($data1 = mysqli_fetch_assoc($run1)){
-                                    if($data['cid']==$data1['cid']){
+                            
+                                for($i=0;$i<count($recipe);$i++){
+                                    if($data['cid']==$recipe[$i]['cid']){
                                         echo "
-                
                                         <div class='[ recipe_holder_discover ]' onclick='recipeBoxRedirectdis(this.children[1].getAttribute(\"data-value\"))'>
-                                        <img src='../images/".$data1['file']."' alt='recipe image'>
-                                        <h4 data-value='".$data1['header']."'>".$data1['header']."</h4>
+                                        <img src='../images/".$recipe[$i]['file']."' alt='recipe image'>
+                                        <h4 data-value='".$recipe[$i]['header']."'>".$recipe[$i]['header']."</h4>
                                         </div>
                                     ";
                                     }
                                 }
-                            }
+                                
+                            
                     echo "</div>
                     </span>";
                 }
+            }
             }
             ?>
            
